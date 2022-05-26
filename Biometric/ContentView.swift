@@ -26,11 +26,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
   @available(iOS 13.0.0, *)
   static var previews: some View {
-    if #available(iOS 14.0, *) {
-      ContentView()
-    } else {
-      // Fallback on earlier versions
-    }
+    ContentView()
     }
 }
 

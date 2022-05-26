@@ -41,10 +41,6 @@ struct LoginView: View {
                         .frame(width: 50, height: 50)
                 }
             }
-            Image("LaunchScreen")
-                .onTapGesture {
-                    UIApplication.shared.endEditing()
-                }
             Spacer()
         }
         .autocapitalization(.none)
@@ -69,12 +65,8 @@ struct LoginView: View {
 struct LoginView_Previews: PreviewProvider {
   @available(iOS 13.0.0, *)
   static var previews: some View {
-    if #available(iOS 14.0, *) {
-      LoginView()
-        .environmentObject(Authentication())
-    } else {
-      // Fallback on earlier versions
-    }
+    LoginView()
+      .environmentObject(Authentication())
     }
 }
 

@@ -1,7 +1,7 @@
+
 import SwiftUI
 import LocalAuthentication
 
-@available(iOS 13.0, *)
 class Authentication: ObservableObject {
     @Published var isValidated = false
     @Published var isAuthorized = false
@@ -64,10 +64,10 @@ class Authentication: ObservableObject {
     }
     
     func requestBiometricUnlock(completion: @escaping (Result<Credentials, AuthenticationError>) -> Void) {
-    //   let credentials:Credentials? = Credentials(email: "anything", password: "password")
+//        let credentials:Credentials? = Credentials(email: "anything", password: "password")
 //        let credentials:Credentials? = nil
         let credentials = KeychainStorage.getCredentials()
-      guard credentials != nil else {
+        guard credentials != nil else {
             completion(.failure(.credentialsNotSaved))
             return
         }
@@ -96,7 +96,7 @@ class Authentication: ObservableObject {
                         if error != nil {
                             completion(.failure(.biometrictError))
                         } else {
-                          completion(.success(credentials!))
+                            completion(.success(credentials!))
                         }
                     }
                 }
@@ -104,6 +104,3 @@ class Authentication: ObservableObject {
         }
     }
 }
-
-
-

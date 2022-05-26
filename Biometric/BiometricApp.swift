@@ -8,12 +8,12 @@
 import SwiftUI
 
 @main
-struct BiometricApp: App {
-    let authentication = Authentication()
+struct MySecureApp_App: App {
+    @StateObject var authentication = Authentication()
     var body: some Scene {
         WindowGroup {
             if authentication.isValidated {
-              ContentView()
+                ContentView()
                     .environmentObject(authentication)
             } else {
                 LoginView()
@@ -22,4 +22,3 @@ struct BiometricApp: App {
         }
     }
 }
-

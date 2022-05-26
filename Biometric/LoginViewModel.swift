@@ -1,19 +1,10 @@
-//
-//  LoginedView.swift
-//  iOSFrameWork
-//
-//  Created by Wynne Tran on 2022-05-25.
-//
-
 import Foundation
 
-@available(iOS 13.0, *)
-public class LoginViewModel: NSObject,  ObservableObject {
+class LoginViewModel: ObservableObject {
     @Published var credentials = Credentials()
     @Published var showProgressView = false
     @Published var error: Authentication.AuthenticationError?
     @Published var storeCredentialsNext = false
-  
     
     var loginDisabled: Bool {
         credentials.email.isEmpty || credentials.password.isEmpty
