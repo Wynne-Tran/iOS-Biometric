@@ -1,0 +1,403 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		88C1D5E0283F324C0060461C /* BiometricApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C1D5DF283F324C0060461C /* BiometricApp.swift */; };
+		88C1D5E2283F324C0060461C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C1D5E1283F324C0060461C /* ContentView.swift */; };
+		88C1D5E4283F324D0060461C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88C1D5E3283F324D0060461C /* Assets.xcassets */; };
+		88C1D5E7283F324D0060461C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88C1D5E6283F324D0060461C /* Preview Assets.xcassets */; };
+		88C1D5E9283F324D0060461C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C1D5E8283F324D0060461C /* Persistence.swift */; };
+		88C1D5EC283F324D0060461C /* Biometric.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 88C1D5EA283F324D0060461C /* Biometric.xcdatamodeld */; };
+		88C1D5F5283F332D0060461C /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C1D5F4283F332D0060461C /* Authentication.swift */; };
+		88C1D5F8283F33450060461C /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C1D5F7283F33450060461C /* KeychainStorage.swift */; };
+		88C1D5FB283F33580060461C /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C1D5FA283F33580060461C /* Credentials.swift */; };
+		88C1D5FE283F33710060461C /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C1D5FD283F33710060461C /* APIService.swift */; };
+		88C1D601283F338D0060461C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C1D600283F338D0060461C /* LoginViewModel.swift */; };
+		88C1D604283F339F0060461C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C1D603283F339F0060461C /* LoginView.swift */; };
+		88C1D608283F33D50060461C /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = 88C1D607283F33D50060461C /* SwiftKeychainWrapper */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		88C1D5DC283F324C0060461C /* Biometric.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Biometric.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		88C1D5DF283F324C0060461C /* BiometricApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricApp.swift; sourceTree = "<group>"; };
+		88C1D5E1283F324C0060461C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		88C1D5E3283F324D0060461C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		88C1D5E6283F324D0060461C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		88C1D5E8283F324D0060461C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		88C1D5EB283F324D0060461C /* Biometric.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Biometric.xcdatamodel; sourceTree = "<group>"; };
+		88C1D5ED283F324D0060461C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88C1D5F4283F332D0060461C /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		88C1D5F7283F33450060461C /* KeychainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
+		88C1D5FA283F33580060461C /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		88C1D5FD283F33710060461C /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		88C1D600283F338D0060461C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		88C1D603283F339F0060461C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		88C1D5D9283F324C0060461C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88C1D608283F33D50060461C /* SwiftKeychainWrapper in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		88C1D5D3283F324C0060461C = {
+			isa = PBXGroup;
+			children = (
+				88C1D5DE283F324C0060461C /* Biometric */,
+				88C1D5DD283F324C0060461C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		88C1D5DD283F324C0060461C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				88C1D5DC283F324C0060461C /* Biometric.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		88C1D5DE283F324C0060461C /* Biometric */ = {
+			isa = PBXGroup;
+			children = (
+				88C1D5DF283F324C0060461C /* BiometricApp.swift */,
+				88C1D5E1283F324C0060461C /* ContentView.swift */,
+				88C1D5E3283F324D0060461C /* Assets.xcassets */,
+				88C1D5E8283F324D0060461C /* Persistence.swift */,
+				88C1D5ED283F324D0060461C /* Info.plist */,
+				88C1D5EA283F324D0060461C /* Biometric.xcdatamodeld */,
+				88C1D5E5283F324D0060461C /* Preview Content */,
+				88C1D5F4283F332D0060461C /* Authentication.swift */,
+				88C1D5F7283F33450060461C /* KeychainStorage.swift */,
+				88C1D5FA283F33580060461C /* Credentials.swift */,
+				88C1D5FD283F33710060461C /* APIService.swift */,
+				88C1D600283F338D0060461C /* LoginViewModel.swift */,
+				88C1D603283F339F0060461C /* LoginView.swift */,
+			);
+			path = Biometric;
+			sourceTree = "<group>";
+		};
+		88C1D5E5283F324D0060461C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				88C1D5E6283F324D0060461C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		88C1D5DB283F324C0060461C /* Biometric */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88C1D5F0283F324D0060461C /* Build configuration list for PBXNativeTarget "Biometric" */;
+			buildPhases = (
+				88C1D5D8283F324C0060461C /* Sources */,
+				88C1D5D9283F324C0060461C /* Frameworks */,
+				88C1D5DA283F324C0060461C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Biometric;
+			packageProductDependencies = (
+				88C1D607283F33D50060461C /* SwiftKeychainWrapper */,
+			);
+			productName = Biometric;
+			productReference = 88C1D5DC283F324C0060461C /* Biometric.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		88C1D5D4283F324C0060461C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					88C1D5DB283F324C0060461C = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 88C1D5D7283F324C0060461C /* Build configuration list for PBXProject "Biometric" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 88C1D5D3283F324C0060461C;
+			packageReferences = (
+				88C1D606283F33D50060461C /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
+			);
+			productRefGroup = 88C1D5DD283F324C0060461C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				88C1D5DB283F324C0060461C /* Biometric */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		88C1D5DA283F324C0060461C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88C1D5E7283F324D0060461C /* Preview Assets.xcassets in Resources */,
+				88C1D5E4283F324D0060461C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		88C1D5D8283F324C0060461C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88C1D5EC283F324D0060461C /* Biometric.xcdatamodeld in Sources */,
+				88C1D5E9283F324D0060461C /* Persistence.swift in Sources */,
+				88C1D5E2283F324C0060461C /* ContentView.swift in Sources */,
+				88C1D5FB283F33580060461C /* Credentials.swift in Sources */,
+				88C1D5F5283F332D0060461C /* Authentication.swift in Sources */,
+				88C1D5E0283F324C0060461C /* BiometricApp.swift in Sources */,
+				88C1D5FE283F33710060461C /* APIService.swift in Sources */,
+				88C1D5F8283F33450060461C /* KeychainStorage.swift in Sources */,
+				88C1D604283F339F0060461C /* LoginView.swift in Sources */,
+				88C1D601283F338D0060461C /* LoginViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		88C1D5EE283F324D0060461C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		88C1D5EF283F324D0060461C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		88C1D5F1283F324D0060461C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Biometric/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Biometric/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DandelionNet.Biometric;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		88C1D5F2283F324D0060461C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Biometric/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Biometric/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DandelionNet.Biometric;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		88C1D5D7283F324C0060461C /* Build configuration list for PBXProject "Biometric" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88C1D5EE283F324D0060461C /* Debug */,
+				88C1D5EF283F324D0060461C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88C1D5F0283F324D0060461C /* Build configuration list for PBXNativeTarget "Biometric" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88C1D5F1283F324D0060461C /* Debug */,
+				88C1D5F2283F324D0060461C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		88C1D606283F33D50060461C /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jrendel/SwiftKeychainWrapper";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		88C1D607283F33D50060461C /* SwiftKeychainWrapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88C1D606283F33D50060461C /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
+			productName = SwiftKeychainWrapper;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		88C1D5EA283F324D0060461C /* Biometric.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				88C1D5EB283F324D0060461C /* Biometric.xcdatamodel */,
+			);
+			currentVersion = 88C1D5EB283F324D0060461C /* Biometric.xcdatamodel */;
+			path = Biometric.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 88C1D5D4283F324C0060461C /* Project object */;
+}
